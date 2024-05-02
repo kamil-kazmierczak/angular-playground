@@ -7,5 +7,8 @@ import { Recipe } from '../recipe.model';
   styleUrl: './recipe-list.component.css'
 })
 export class RecipeListComponent {
-  recipes: Recipe[] = [];
+  recipes: Recipe[] = [
+    new Recipe("Pizza", "Four Cheese", "https://thornton.garlicknotpizza.com/wp-content/uploads/sites/4/2020/01/cheese.jpg"),
+    new Recipe("Domestic Pizza", "Capricciosa", "https://thornton.garlicknotpizza.com/wp-content/uploads/sites/4/2020/01/cheese.jpg"),
+  ];
 }
