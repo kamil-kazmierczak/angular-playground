@@ -11,5 +11,12 @@ export class ShoppingListComponent {
     new Ingredient('Kiwi', 5),
     new Ingredient('Potatoes', 4),
   ]
+  clickedButtonsCounter = 0;
+  lastClickedButton: string = '';
+
+  onClickedButtons(event: { buttonType: string, buttonClicked: true }) {
+    this.clickedButtonsCounter++;
+    this.lastClickedButton = event.buttonType;
+  }
 
 }

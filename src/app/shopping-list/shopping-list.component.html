@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-xs-10">
-    <app-shopping-list-edit></app-shopping-list-edit>
+    <app-shopping-list-edit (buttonClickEvent)="onClickedButtons($event)"
+    ></app-shopping-list-edit>
     <hr>
     <ul class="list-group">
       <a
@@ -12,4 +13,9 @@
       </a>
     </ul>
   </div>
+</div>
+<div class="row">
+  Clicked buttons: {{ clickedButtonsCounter }}
+  <br>
+  Last clicked button: {{ lastClickedButton }}
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-shopping-list-edit',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ShoppingListEditComponent {
 
+  @Output()
+  buttonClickEvent = new EventEmitter<{buttonClicked: boolean, buttonType: string}>();
+
+  onButtonClicked(type: string) {
+    this.buttonClickEvent.emit({buttonClicked: true, buttonType: type});
+  }
 }
